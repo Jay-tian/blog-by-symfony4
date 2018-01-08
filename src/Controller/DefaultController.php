@@ -2,18 +2,13 @@
 namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class DefaultController extends BaseController
 {
     public function index()
     {
-        $number = mt_rand(0, 100);
- $em = $this->getDoctrine()->getManager()->getConnection();
- var_dump( $em->fetchAll('select * from user') );
- exit;
-        return $this->render('index.html.twig', array(
-            'number' => $number,
-        ));
+        $users = $this->container->get('App\Dao\User\UserDao')->search(array(), array(), 0, 10);
+        var_dump( $users );
+        exit;
     }
 }

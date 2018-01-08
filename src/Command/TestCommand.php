@@ -24,6 +24,7 @@ class TestCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        var_dump($this->getApplication());
         $output->writeln('test!');
     }
 }

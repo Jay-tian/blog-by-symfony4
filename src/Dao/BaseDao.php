@@ -198,14 +198,6 @@ class BaseDao implements BaseInterface
         return $this->table;
     }
 
-    /**
-     * @return Connection
-     */
-    public function db()
-    {
-         return $this->container->get('doctrine.dbal.default_connection');
-    }
-
     protected function getByFields($fields)
     {
         $placeholders = array_map(
@@ -320,5 +312,13 @@ class BaseDao implements BaseInterface
         if (!in_array(strtoupper($sort), array('ASC', 'DESC'), true)) {
             throw $this->createDaoException("SQL order by direction is only allowed `ASC`, `DESC`, but you give `{$sort}`.");
         }
+    }
+
+    /**
+     * @return Connection
+     */
+    public function db()
+    {
+         return $this->container->get('doctrine.dbal.default_connection');
     }
 }

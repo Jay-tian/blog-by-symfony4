@@ -1,9 +1,10 @@
 <?php
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use Symfony\Component\HttpFoundation\Response;
+use App\Controller\BaseController;
 
-class DefaultController extends BaseController
+class IndexController extends BaseController
 {
     public function index()
     {

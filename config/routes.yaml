@@ -1,0 +1,7 @@
+routing:
+    resource: ../src/Routing/route.yml
+    prefix:   /
+
+routing_admin:
+    resource: ../src/Routing/route_admin.yml
+    prefix:   /admin

@@ -1,3 +1,36 @@
 index:
    path: /
    controller: App\Controller\DefaultController::index
+
+login:
+    path:  /login
+    controller: App\Controller\LoginController::login
+
+register: 
+    path:  /register
+    controller: App\Controller\LoginController::register
+
+login_check:
+    path:  /login_check
+
+logout:
+    path:  /logout
+
+
+# search:
+#     path: /search
+#     defaults: { _controller: AppBundle:Default:index }
+
+# article_detail:
+#     path: /article/{id}
+#     defaults: { _controller: AppBundle:Article:detail }
+#     requirements:
+#         id: \d+
+
+# article_create:
+#     path: /article/create
+#     defaults: { _controller: AppBundle:Article:create }
+
+# demo:
+#     path: /demo
+#     defaults: { _controller: AppBundle:Default:demo }

@@ -17,7 +17,7 @@ entries = Object.assign({}, {'main': fileRootPath + 'main.js'}, entries);
 
 
 let config = {
-    rootPath:root,
+    rootPath: root,
     entries: entries,
     output: {
         path: root + "/public/dist/", 

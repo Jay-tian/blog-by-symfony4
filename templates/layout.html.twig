@@ -15,13 +15,13 @@
                 个人博客-记录技术-分享生活 
             {% endblock %}
         </title>
-        {# {% do script(['dist/main.js'], 10000) %}        
+         {% do script(['dist/main.js'], 10000) %}        
         {% do css(['dist/main.css']) %}
-        {% include 'webpack-load/load-css.html.twig' %} #}
+        {% include 'webpack-load/load-css.html.twig' %} 
     </head>
     <body class="{{ bodyClass|default() }}">
         {% block body %}
         {% endblock %}
-        {# {% include 'webpack-load/load-js.html.twig' %} #}
+         {% include 'webpack-load/load-js.html.twig' %} 
     </body>
 </html>

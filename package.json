@@ -28,8 +28,8 @@
     "webpack-dev-server": "^2.8.0"
   },
   "scripts": {
-    "build": "webpack -p --config './webpack/webpack.prod.babel.js' ",
-    "start": "webpack-dev-server --color --config './webpack/webpack.dev.babel.js'"
+    "build": "webpack -p --config './webpack/webpack.babel.js' --env prod",
+    "dev": "webpack-dev-server --color --config './webpack/webpack.babel.js' --env dev"
   },
   "name": "tianshengjie",
   "description": "blog ====",
